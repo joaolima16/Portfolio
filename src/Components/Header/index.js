@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import './style.css'
+import { Link } from 'react-router-dom'
 export default function Header() {
   const [Mode, SetMode] = useState(false)
   const ToggleMode = () => {
@@ -10,8 +11,8 @@ export default function Header() {
       <div className='Wrapper'>
         <div className='list-wrapper'>
           <ul className='informations-list'>
-            <li> Sobre mim</li>
-            <li> Ferramentas</li>
+            <Link to="/"><li> Home</li> </Link>
+            <Link to="/sobre"><li> Sobre mim</li></Link>
             <li> Projetos</li>
             <li> Contatos</li>
           </ul>
